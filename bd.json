@@ -1,0 +1,85 @@
+{
+  "pacientes": [
+    {
+      "ci": 244,
+      "nombre": "luis",
+      "direccion": "sab",
+      "horaIngreso": "9:57:54 a. m.",
+      "sintomas": ""
+    },
+    {
+      "ci": 23781625,
+      "nombre": "asdsda",
+      "direccion": "sab",
+      "horaIngreso": "9:57:54 a. m.",
+      "sintomas": ""
+    },
+    {
+      "ci": 24234,
+      "nombre": "sdfsdf",
+      "direccion": "sab",
+      "horaIngreso": "9:57:54 a. m.",
+      "sintomas": ""
+    },
+    {
+      "ci": 456,
+      "nombre": "luis",
+      "direccion": "sab",
+      "horaIngreso": "9:57:54 a. m.",
+      "sintomas": ""
+    },
+    {
+      "ci": 12345153,
+      "nombre": "asa",
+      "direccion": "asas",
+      "horaIngreso": "10:00:38 a. m.",
+      "sintomas": ""
+    },
+    {
+      "ci": 5326,
+      "nombre": "asasas",
+      "direccion": "asasas",
+      "horaIngreso": "10:02:14 a. m.",
+      "sintomas": ""
+    },
+    {
+      "ci": 534,
+      "nombre": "pedro",
+      "direccion": "asas",
+      "horaIngreso": "10:11:42 a. m.",
+      "sintomas": ""
+    },
+    {
+      "ci": 234,
+      "nombre": "asas",
+      "direccion": "asasas",
+      "horaIngreso": "10:12:15 a. m.",
+      "sintomas": ""
+    },
+    {
+      "ci": 234,
+      "nombre": "asassa",
+      "direccion": "asasasas",
+      "horaIngreso": "10:16:23 a. m."
+    },
+    {
+      "ci": 234,
+      "nombre": "asasas",
+      "direccion": "saasas",
+      "horaIngreso": "10:17:58 a. m."
+    },
+    {
+      "ci": 234,
+      "nombre": "asasas",
+      "direccion": "saasas",
+      "horaIngreso": "10:19:24 a. m."
+    },
+    {
+      "ci": 13535,
+      "nombre": "gdgdgd",
+      "direccion": "dgdgdg",
+      "horaIngreso": "10:24:42 a. m.",
+      "sintomas": "dgdgdg"
+    }
+  ]
+}

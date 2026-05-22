@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paciente Registrado</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>✅ Registro Exitoso</h1>
+        <p>El paciente ha sido guardado en la base de datos (bd.json)</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Resumen de Datos</h2>
+            <ul>
+                <li><strong>Cédula:</strong> <%= ci %></li>
+                <li><strong>Nombre:</strong> <%= nombre %></li>
+                <li><strong>Dirección:</strong> <%= direccion %></li>
+                <li><strong>Hora de Ingreso:</strong> <%= horaIngreso %></li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>¿Qué deseas hacer ahora?</h2>
+            <ul>
+                <li><a href="/nuevo-paciente">➕ Registrar otro paciente</a></li>
+                <li><a href="/">🏠 Volver al inicio</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Programación II · Trayecto II · UPTT</p>
+    </footer>
+</body>
+</html>
