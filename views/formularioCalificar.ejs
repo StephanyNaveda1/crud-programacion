@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificar Estudiante</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .grupo { margin-bottom: 1rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: bold; color: #1a3a5c; }
+        input { 
+            width: 100%; 
+            padding: 0.75rem; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2); }
+        form button { margin-top: 1rem; width: 100%; font-weight: bold; font-size: 1.1rem; }
+        .info-estudiante {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .info-estudiante p {
+            margin-bottom: 0.25rem;
+            font-size: 1.05rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📝 Calificar Estudiante</h1>
+        <p>Asignar o actualizar las calificaciones del estudiante</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Ingresar Notas</h2>
+            
+            <div class="info-estudiante">
+                <p><strong>Estudiante:</strong> <%= nombre %> <%= apellido %></p>
+                <p><strong>Cédula:</strong> <%= ci %></p>
+            </div>
+
+            <form action="/guardar-calificaciones" method="POST">
+                
+                <!-- Cédula oculta para enviarla al backend -->
+                <input type="hidden" name="ci" value="<%= ci %>">
+
+                <div class="grupo">
+                    <label for="nota1">Nota 1 (0-20):</label>
+                    <input type="number" id="nota1" name="nota1" required min="0" max="20" placeholder="Ej: 15" value="<%= nota1 %>">
+                </div>
+
+                <div class="grupo">
+                    <label for="nota2">Nota 2 (0-20):</label>
+                    <input type="number" id="nota2" name="nota2" required min="0" max="20" placeholder="Ej: 16" value="<%= nota2 %>">
+                </div>
+
+                <div class="grupo">
+                    <label for="nota3">Nota 3 (0-20):</label>
+                    <input type="number" id="nota3" name="nota3" required min="0" max="20" placeholder="Ej: 17" value="<%= nota3 %>">
+                </div>
+
+                <div class="grupo">
+                    <label for="nota4">Nota 4 (0-20):</label>
+                    <input type="number" id="nota4" name="nota4" required min="0" max="20" placeholder="Ej: 18" value="<%= nota4 %>">
+                </div>
+
+                <button type="submit">Guardar Calificaciones</button>
+                
+            </form>
+        </section>
+
+        <section class="card">
+            <ul>
+                <li><a href="/calificar-estudiante">⬅ Buscar otro estudiante</a></li>
+                <li><a href="/">🏠 Volver al inicio</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Programación II · Trayecto II · UPTT</p>
+    </footer>
+</body>
+</html>

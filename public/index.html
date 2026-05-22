@@ -3,38 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servidor UPTT</title>
+    <title>Servidor UPTT - CRUD Estudiantes</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <header>
         <h1>🎓 Servidor Express - UPTT</h1>
-        <p>Archivo estático servido desde la carpeta <code>public/</code></p>
+        <p>Sistema de Control de Estudiantes y Calificaciones</p>
     </header>
 
     <main>
         <section class="card">
-            <h2>¿Qué es esto?</h2>
+            <h2>Gestión Académica</h2>
             <p>
-                Este archivo HTML fue servido por <strong>Express.js</strong> usando el middleware
-                <code>express.static('public')</code>. No necesitó ninguna ruta programada manualmente.
+                Bienvenido al sistema de administración de estudiantes de la UPTT. Seleccione una de las siguientes opciones para interactuar con la base de datos:
             </p>
         </section>
 
         <section class="card">
-            <h2>Rutas disponibles en este servidor</h2>
-            <ul>
-                <li><a href="/">/ — Esta página (estático)</a></li>
-                <li><a href="/nuevo-paciente">/registrar nuevo paciente</a></li>
-                <li><a href="/modificar-paciente">/modificar paciente</a></li>
-                <li><a href="/eliminar-paciente">/eliminar paciente</a></li>
+            <h2>Operaciones Disponibles</h2>
+            <ul style="padding-left: 1rem; list-style-type: disc;">
+                <li style="margin: 0.5rem 0;"><a href="/nuevo-estudiante" style="font-weight: bold; font-size: 1.05rem;">➕ Registrar Nuevo Estudiante</a></li>
+                <li style="margin: 0.5rem 0;"><a href="/ver-estudiantes" style="font-weight: bold; font-size: 1.05rem;">📋 Ver Lista de Estudiantes</a></li>
+                <li style="margin: 0.5rem 0;"><a href="/modificar-estudiante" style="font-weight: bold; font-size: 1.05rem;">✏️ Editar Estudiante</a></li>
+                <li style="margin: 0.5rem 0;"><a href="/eliminar-estudiante" style="font-weight: bold; font-size: 1.05rem;">❌ Eliminar Estudiante</a></li>
+                <li style="margin: 0.5rem 0;"><a href="/calificar-estudiante" style="font-weight: bold; font-size: 1.05rem;">📝 Calificar Estudiante (Solo Notas)</a></li>
             </ul>
         </section>
 
         <section class="card">
             <h2>Interacción con JavaScript</h2>
-            <p>La hora actual (calculada en el <strong>navegador</strong>):</p>
+            <p>Hora local del navegador:</p>
             <p id="hora-cliente" class="hora">--:--:--</p>
             <button id="btn-actualizar">🔄 Actualizar hora</button>
         </section>

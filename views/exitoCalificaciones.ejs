@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudiante Modificado</title>
+    <title>Calificaciones Guardadas</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <header>
-        <h1>✅ Modificación Exitosa</h1>
-        <p>Los datos personales del estudiante han sido actualizados en la base de datos (bd.json)</p>
+        <h1>✅ Calificaciones Guardadas</h1>
+        <p>Las calificaciones del estudiante han sido actualizadas en la base de datos (bd.json)</p>
     </header>
 
     <main>
         <section class="card">
-            <h2>Resumen de Datos Modificados</h2>
+            <h2>Resumen de Calificaciones</h2>
             <ul>
                 <li><strong>Cédula:</strong> <%= ci %></li>
-                <li><strong>Nombre:</strong> <%= nombre %></li>
-                <li><strong>Apellido:</strong> <%= apellido %></li>
+                <li><strong>Estudiante:</strong> <%= nombre %> <%= apellido %></li>
+                <li><strong>Nota 1:</strong> <%= nota1 %></li>
+                <li><strong>Nota 2:</strong> <%= nota2 %></li>
+                <li><strong>Nota 3:</strong> <%= nota3 %></li>
+                <li><strong>Nota 4:</strong> <%= nota4 %></li>
             </ul>
         </section>
 
@@ -26,6 +29,7 @@
             <h2>¿Qué deseas hacer ahora?</h2>
             <ul>
                 <li><a href="/ver-estudiantes">📋 Ver lista de estudiantes</a></li>
+                <li><a href="/calificar-estudiante">📝 Calificar otro estudiante</a></li>
                 <li><a href="/">🏠 Volver al inicio</a></li>
             </ul>
         </section>

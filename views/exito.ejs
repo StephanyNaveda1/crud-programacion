@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paciente Registrado</title>
+    <title>Estudiante Registrado</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <header>
         <h1>✅ Registro Exitoso</h1>
-        <p>El paciente ha sido guardado en la base de datos (bd.json)</p>
+        <p>El estudiante ha sido guardado en la base de datos (bd.json)</p>
     </header>
 
     <main>
@@ -18,15 +18,18 @@
             <ul>
                 <li><strong>Cédula:</strong> <%= ci %></li>
                 <li><strong>Nombre:</strong> <%= nombre %></li>
-                <li><strong>Dirección:</strong> <%= direccion %></li>
-                <li><strong>Hora de Ingreso:</strong> <%= horaIngreso %></li>
+                <li><strong>Apellido:</strong> <%= apellido %></li>
             </ul>
+            <p style="margin-top: 1rem; color: #475569; font-style: italic;">
+                Las calificaciones del estudiante han sido inicializadas en 0 de forma predeterminada.
+            </p>
         </section>
 
         <section class="card">
             <h2>¿Qué deseas hacer ahora?</h2>
             <ul>
-                <li><a href="/nuevo-paciente">➕ Registrar otro paciente</a></li>
+                <li><a href="/nuevo-estudiante">➕ Registrar otro estudiante</a></li>
+                <li><a href="/calificar-estudiante?ci=<%= ci %>">📝 Calificar a este estudiante</a></li>
                 <li><a href="/">🏠 Volver al inicio</a></li>
             </ul>
         </section>

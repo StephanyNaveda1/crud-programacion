@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Estudiantes</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 1rem;
+            text-align: left;
+        }
+        th, td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #1a3a5c;
+            color: white;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f8fafc;
+        }
+        .promedio {
+            font-weight: bold;
+            color: #1a3a5c;
+        }
+        .sin-datos {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎓 Lista de Estudiantes</h1>
+        <p>Todos los estudiantes registrados y sus calificaciones</p>
+    </header>
+
+    <main style="max-width: 1000px;">
+        <section class="card">
+            <h2>Registros de la UPTT</h2>
+            
+            <% if (estudiantes.length === 0) { %>
+                <p class="sin-datos">No hay estudiantes registrados actualmente.</p>
+            <% } else { %>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cédula</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Nota 1</th>
+                                <th>Nota 2</th>
+                                <th>Nota 3</th>
+                                <th>Nota 4</th>
+                                <th>Promedio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% estudiantes.forEach(estudiante => { 
+                                let n1 = estudiante.nota1;
+                                let n2 = estudiante.nota2;
+                                let n3 = estudiante.nota3;
+                                let n4 = estudiante.nota4;
+                                let promedio = '-';
+                                if (typeof n1 === 'number' && typeof n2 === 'number' && typeof n3 === 'number' && typeof n4 === 'number') {
+                                    promedio = ((n1 + n2 + n3 + n4) / 4).toFixed(2);
+                                }
+                            %>
+                                <tr>
+                                    <td><%= estudiante.ci %></td>
+                                    <td><%= estudiante.nombre %></td>
+                                    <td><%= estudiante.apellido %></td>
+                                    <td><%= n1 %></td>
+                                    <td><%= n2 %></td>
+                                    <td><%= n3 %></td>
+                                    <td><%= n4 %></td>
+                                    <td class="promedio"><%= promedio %></td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            <% } %>
+        </section>
+
+        <section class="card">
+            <ul>
+                <li><a href="/">⬅ Volver al inicio</a></li>
+                <li><a href="/nuevo-estudiante">➕ Registrar nuevo estudiante</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Programación II · Trayecto II · UPTT</p>
+    </footer>
+</body>
+</html>

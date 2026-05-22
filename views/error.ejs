@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error en la Operación</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .error-card {
+            border-left: 5px solid #ef4444;
+        }
+        .error-message {
+            color: #b91c1c;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #7f1d1d;">
+        <h1>❌ Error en la Operación</h1>
+        <p>No se pudo completar la solicitud debido a un problema de validación</p>
+    </header>
+
+    <main>
+        <section class="card error-card">
+            <h2>Detalle del Error</h2>
+            <p class="error-message">
+                <%= mensaje %>
+            </p>
+            <p>Por favor, regrese y verifique que los datos ingresados sean correctos.</p>
+        </section>
+
+        <section class="card">
+            <ul>
+                <li><a href="javascript:history.back()">⬅ Regresar al formulario anterior</a></li>
+                <li><a href="/">🏠 Volver al inicio</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Programación II · Trayecto II · UPTT</p>
+    </footer>
+</body>
+</html>
